@@ -1,0 +1,376 @@
+@font-face {
+  font-family: 'NB International Pro';
+  src: url('/fonts/NBInternationalPro_Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NB International Pro';
+  src: url('/fonts/NBInternationalPro_Regular.woff2') format('woff2');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('/fonts/GeistMono_Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('/fonts/IBMPlexMono_Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Colors */
+  --color-bg-page: #FFFFFF;
+  --color-bg-secondary: #F8F8F8;
+  --color-bg-surface: #FCFCFC;
+  --color-text-primary: #191919;
+  --color-text-secondary: rgba(25, 25, 25, 0.62);
+  --color-text-muted: rgba(25, 25, 25, 0.40);
+  --color-text-inverse: #FFFFFF;
+  --color-accent-blue: #317CFF;
+  --color-accent-green: #00A558;
+  --color-accent-red: #F53B3A;
+  --color-border-subtle: rgba(0, 0, 0, 0.06);
+  --color-border-default: rgba(0, 0, 0, 0.09);
+  --color-border-strong: rgba(0, 0, 0, 0.14);
+  --color-badge-bg: rgba(0, 0, 0, 0.04);
+  --color-badge-bg-hover: rgba(0, 0, 0, 0.07);
+  --btn-primary-bg: #000000;
+  --btn-primary-text: #FFFFFF;
+  --btn-primary-hover: #191919;
+  --color-card-bg: #FFFFFF;
+  --color-card-border: rgba(0, 0, 0, 0.06);
+  --color-card-border-hover: rgba(0, 0, 0, 0.12);
+  --color-card-inner: #F8F8F8;
+  --color-glass-card-bg: rgba(255, 255, 255, 0.92);
+  --color-glass-card-border: rgba(0, 0, 0, 0.08);
+  --color-logo-filter: none;
+  --color-badge-filter: none;
+  --color-hero-collage-blend: multiply;
+  --color-hero-collage-opacity-layer1: 0.6;
+  --color-hero-collage-opacity-layer2: 0.85;
+  --color-hero-collage-filter: none;
+  --color-bottom-blur-tint: rgba(255, 255, 255, 0.75);
+  --color-bot-stroke: #38BDF9;
+
+  /* Login page theme tokens (Light Mode default) */
+  --login-page-bg: #F4F4F6;
+  --login-card-bg: #FFFFFF;
+  --login-text-primary: #191919;
+  --login-text-secondary: rgba(25, 25, 25, 0.62);
+  --login-text-muted: rgba(25, 25, 25, 0.40);
+  --login-btn-bg: #FFFFFF;
+  --login-btn-border: rgba(0, 0, 0, 0.12);
+  --login-btn-color: #191919;
+  --login-btn-hover-bg: rgba(0, 0, 0, 0.04);
+  --login-input-bg: #FFFFFF;
+  --login-input-border: rgba(0, 0, 0, 0.14);
+  --login-input-color: #191919;
+  --login-submit-bg: #191919;
+  --login-submit-color: #FFFFFF;
+  --login-submit-hover: #000000;
+  --login-logo-fill: #191919;
+  --login-glass-bg: rgba(255, 255, 255, 0.85);
+  --login-glass-border: rgba(0, 0, 0, 0.10);
+  --login-glass-text: #191919;
+
+  /* Typography */
+  --font-sans: 'NB International Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: 'Geist Mono', 'IBM Plex Mono', monospace;
+
+  /* Font Sizes & Tracking */
+  --text-hero: 64px;
+  --leading-hero: 100%;
+  --tracking-hero: -0.03em;
+
+  --text-h1: 40px;
+  --leading-h1: 104%;
+  --tracking-h1: -0.03em;
+
+  --text-h2: 32px;
+  --leading-h2: 120%;
+  --tracking-h2: -0.02em;
+
+  --text-h3: 20px;
+  --leading-h3: 120%;
+  --tracking-h3: -0.01em;
+
+  --text-body: 16px;
+  --leading-body: 140%;
+
+  --text-ui: 14px;
+  --leading-ui: 140%;
+
+  --text-sm: 13px;
+  --leading-sm: 18px;
+
+  --text-xs: 12px;
+  --leading-xs: 16px;
+
+  /* Layout */
+  --container-max-width: 1400px;
+  --container-padding-desktop: 60px;
+  --container-padding-mobile: 20px;
+
+  /* Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-window: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-card: 0px 8.94px 13.4px -2.68px rgba(0, 0, 0, 0.06);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  font-feature-settings: "cv09", "cv10", "ss01";
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+}
+
+/* Common container constraints */
+.container-constrained {
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-inline: var(--container-padding-desktop);
+  width: 100%;
+}
+
+.inner-border-column {
+  border-left: 1px solid var(--color-border-subtle);
+  border-right: 1px solid var(--color-border-subtle);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container-constrained {
+    padding-inline: var(--container-padding-mobile);
+  }
+}
+
+/* Dark Theme Tokens */
+html.dark {
+  --color-bg-page: #0C0D0E;
+  --color-bg-secondary: #121417;
+  --color-bg-surface: #16181C;
+  --color-text-primary: #FFFFFFE6;
+  --color-text-secondary: #FFFFFF85;
+  --color-text-muted: rgba(255, 255, 255, 0.40);
+  --color-text-inverse: #0C0D0E;
+  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  --color-border-default: rgba(255, 255, 255, 0.12);
+  --color-border-strong: rgba(255, 255, 255, 0.18);
+  --color-badge-bg: rgba(255, 255, 255, 0.06);
+  --color-badge-bg-hover: rgba(255, 255, 255, 0.10);
+  --btn-primary-bg: #EDEDED;
+  --btn-primary-text: #0C0D0E;
+  --btn-primary-hover: #FFFFFF;
+  --color-card-bg: #14161A;
+  --color-card-border: rgba(255, 255, 255, 0.09);
+  --color-card-border-hover: rgba(255, 255, 255, 0.18);
+  --color-card-inner: #191C21;
+  --color-glass-card-bg: rgba(18, 20, 24, 0.85);
+  --color-glass-card-border: rgba(255, 255, 255, 0.12);
+  --color-logo-filter: brightness(0) invert(0.88);
+  --color-badge-filter: brightness(0) invert(0.88);
+  --color-hero-collage-blend: screen;
+  --color-hero-collage-opacity-layer1: 0.18;
+  --color-hero-collage-opacity-layer2: 0.25;
+  --color-hero-collage-filter: grayscale(1) invert(0.9) brightness(0.85);
+  --shadow-card: 0px 8px 24px -4px rgba(0, 0, 0, 0.5), 0px 2px 6px -1px rgba(0, 0, 0, 0.3);
+  --shadow-window: 0px 24px 60px -12px rgba(0, 0, 0, 0.7);
+  --color-bot-stroke: #38BDF9;
+
+  /* Login page theme tokens (Dark Mode) */
+  --login-page-bg: #0C0D0E;
+  --login-card-bg: #131517;
+  --login-text-primary: #FFFFFFE6;
+  --login-text-secondary: #FFFFFF85;
+  --login-text-muted: rgba(255, 255, 255, 0.40);
+  --login-btn-bg: rgba(255, 255, 255, 0.05);
+  --login-btn-border: rgba(255, 255, 255, 0.09);
+  --login-btn-color: #FFFFFFE6;
+  --login-btn-hover-bg: rgba(255, 255, 255, 0.10);
+  --login-input-bg: rgba(255, 255, 255, 0.05);
+  --login-input-border: rgba(255, 255, 255, 0.10);
+  --login-input-color: #FFFFFF;
+  --login-submit-bg: #F9F9F9;
+  --login-submit-color: #000000;
+  --login-submit-hover: #FFFFFF;
+  --login-logo-fill: rgba(255, 255, 255, 0.44);
+  --login-glass-bg: rgba(18, 20, 23, 0.75);
+  --login-glass-border: rgba(255, 255, 255, 0.12);
+  --login-glass-text: rgba(255, 255, 255, 0.90);
+  --color-bottom-blur-tint: rgba(12, 13, 14, 0.75);
+}
+
+/* View Transitions for theme wiping */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+/* Viewport Bottom Progressive Glass Blur (Attio / Vibrant Design style) */
+.viewport-bottom-blur {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 84px;
+  pointer-events: none;
+  z-index: 99;
+  user-select: none;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.12) 20%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.85) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.12) 20%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.85) 80%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.viewport-bottom-blur::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-bottom-blur-tint, rgba(255, 255, 255, 0.75)) 100%
+  );
+  pointer-events: none;
+}
+
+/* Custom Follow-Cursor System */
+[data-slot="cursor"],
+[data-slot="cursor-follow"] {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+[data-slot="cursor"] {
+  z-index: 9999;
+}
+
+[data-slot="cursor-follow"] {
+  z-index: 9998;
+}
+
+.size-6 {
+  width: 24px;
+  height: 24px;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+/* Big Bot Horizon Overlay - Smooth submerged depth above footer */
+.big-bot-horizon-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 180px;
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 40%,
+    rgba(255, 255, 255, 0.85) 75%,
+    var(--color-bg-page) 100%
+  );
+  z-index: 5;
+}
+
+html.dark .big-bot-horizon-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(12, 13, 14, 0) 0%,
+    rgba(12, 13, 14, 0.40) 40%,
+    rgba(12, 13, 14, 0.85) 75%,
+    var(--color-bg-page) 100%
+  );
+}
+
+
+
